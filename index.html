@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse - Advanced License Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-star"></i>
+                <span>Eclipse</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#" class="nav-link active"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="#" class="nav-link"><i class="fas fa-key"></i> License Keys</a>
+                <a href="#" class="nav-link"><i class="fas fa-users"></i> Users</a>
+                <a href="#" class="nav-link"><i class="fas fa-chart-bar"></i> Analytics</a>
+                <a href="#" class="nav-link"><i class="fas fa-cog"></i> Settings</a>
+            </div>
+            <div class="nav-user">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span class="user-name">Admin</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>57,530</h3>
+                    <span>Total Keys</span>
+                    <div class="stat-trend up">
+                        <i class="fas fa-arrow-up"></i> LIVE
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>49,784</h3>
+                    <span>Active Users</span>
+                    <div class="stat-trend up">
+                        <i class="fas fa-arrow-up"></i> LIVE
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>$246,435.75</h3>
+                    <span>Total Revenue</span>
+                    <div class="stat-trend up">
+                        <i class="fas fa-arrow-up"></i> 15%
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>86.5%</h3>
+                    <span>Conversion Rate</span>
+                    <div class="stat-trend up">
+                        <i class="fas fa-arrow-up"></i> 5.2%
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Dashboard -->
+        <div class="dashboard-grid">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Quick Actions -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Quick Actions</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="action-grid">
+                            <button class="action-btn" onclick="showGenerateKeyModal()">
+                                <i class="fas fa-plus"></i>
+                                <span>Generate Keys</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-wallet"></i>
+                                <span>Add Balance</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-user-plus"></i>
+                                <span>Add Employee</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-download"></i>
+                                <span>Export Data</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- License Overview -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>License Overview</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="license-stats">
+                            <div class="license-stat">
+                                <span class="stat-label">Available Licenses</span>
+                                <span class="stat-value">7,744</span>
+                                <div class="stat-trend up">+ LIVE</div>
+                            </div>
+                            <div class="license-stat">
+                                <span class="stat-label">Direct Keys</span>
+                                <span class="stat-value">49,785</span>
+                                <div class="stat-trend up">+ LIVE</div>
+                            </div>
+                            <div class="license-stat">
+                                <span class="stat-label">Online Users</span>
+                                <span class="stat-value">7,744</span>
+                                <div class="stat-trend up">+ LIVE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- System Health -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>System Health</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="health-score">
+                            <div class="health-circle">
+                                <div class="circle-progress" data-percent="90"></div>
+                                <span class="health-percent">90%</span>
+                            </div>
+                            <div class="health-info">
+                                <h4>Excellent</h4>
+                                <p>All systems operational</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Recent Activity</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <i class="fas fa-key activity-icon success"></i>
+                                <div class="activity-content">
+                                    <span class="activity-text">New license activated</span>
+                                    <span class="activity-time">2 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-user activity-icon info"></i>
+                                <div class="activity-content">
+                                    <span class="activity-text">User registration</span>
+                                    <span class="activity-time">5 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-shopping-cart activity-icon primary"></i>
+                                <div class="activity-content">
+                                    <span class="activity-text">New sale completed</span>
+                                    <span class="activity-time">10 minutes ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Balance Card -->
+                <div class="card balance-card">
+                    <div class="card-header">
+                        <h3>Account Balance</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="balance-amount">
+                            <span class="amount">$316.52</span>
+                            <span class="pending">$8.49 pending</span>
+                        </div>
+                        <button class="add-balance-btn">
+                            <i class="fas fa-plus"></i>
+                            Add Balance
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Generate Key Modal -->
+    <div id="generateKeyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Generate License Keys</h3>
+                <span class="close" onclick="closeGenerateKeyModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="keyForm">
+                    <div class="form-group">
+                        <label for="keyAmount">Number of Keys</label>
+                        <input type="number" id="keyAmount" min="1" max="1000" value="1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="keyDuration">Duration (Days)</label>
+                        <input type="number" id="keyDuration" min="1" value="30">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="keyLanguage">Programming Language</label>
+                        <select id="keyLanguage">
+                            <option value="cpp">C++</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="all">All Languages</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="keyPrefix">Key Prefix (Optional)</label>
+                        <input type="text" id="keyPrefix" placeholder="e.g., ECL">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeGenerateKeyModal()">Cancel</button>
+                        <button type="submit" class="btn-primary">Generate Keys</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
